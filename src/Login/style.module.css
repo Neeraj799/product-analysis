@@ -1,0 +1,54 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #4e657a;
+}
+
+.loginWrapper {
+    display: flex;
+    position: relative;
+    right: 20px;
+    top: 110px;
+    width: 500px;
+    height: 400px;
+    margin: 0px auto;
+    background-color: #435c70;
+    border: 2px solid orange;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, .2);
+    justify-content: center;
+    
+    
+}
+
+.loginDesc {
+    display: flex;
+    position: relative;
+    top: 20px;
+    left: 40px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.usernameDesc {
+    color: white;
+    position: relative;
+    top: 80px;
+    right: 280px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.passwordDesc {
+    color: white;
+    position: relative;
+    top: 200px;
+    right: 357px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
