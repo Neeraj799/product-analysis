@@ -2,83 +2,63 @@ import React, {useState} from 'react';
 import Header from '../Header/Header';
 
 import style from "./style.module.css";
-
+import { useNavigate } from 'react-router-dom';
 
 
 
 
 function Login() {
     const [username, setusername] = useState("");
-    const [password,setpassword] =useState("");
+    const [password, setpassword] = useState("");
+    const navigate = useNavigate();
 
-    const handleUsernameChange = (event) => {
-        setusername(event.target.value);
-    };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("Username:", username);
+        console.log("Password:", password);
 
-    const handlePasswordChange = (event) => {
-        setpassword(event.target.value);
-    };
+        navigate('/');
+    }
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
+    const handleButton = (e) => {
 
-    console.log("Username:", username);
-    console.log("Password:", password);
-    };
-
-
-
+        navigate('/')
+    }
     
 
 
 
-
-
-
-
-
-
     return (
-       <>
-       <Header/>
-       <div className={style.loginWrapper}>
-        <h2 className={style.loginDesc}>
-            Welcome to Dashboard, Login
-        </h2>
-
+        <>
+        <Header/>
+             
+        <div className={style.loginWrapper}>
             <form onSubmit={handleSubmit}>
-                <div className={style.inputWrapper}>
-
-                <h3 className={style.usernameDesc}>
-                    Username
-                </h3>
-
-                <input 
-                    type='text'
-                    value={username}
-                    onChange={handleUsernameChange}
-                />
-                </div>
-
-                <div className={style.inputWrapper}>
-                    <h3 className={style.passwordDesc}>
-                        Password
-                    </h3>
-                    <input 
+                <h2 className={style.loginDesc}>
+                Welcome to Dashboard, Login
+                </h2>
+                <div className={style.formInput}>
+                    <label>Username</label>
+                    <input
+                        type='text'
+                        value={username}
+                        onChange={(e) => setusername(e.target.value)}
+                        />
+                    <label>Password</label>
+                    <input
                         type='password'
                         value={password}
-                        onChange={handlePasswordChange}
-                    />
-
+                        onChange={(e) => setpassword(e.target.value)}
+                        />
                 </div>
-
-                <button type='submit' > Log In </button>
+                <div className={style.loginBtn}>
+                <button type='submit'> Login </button>
+                <button type='button' onClick={handleButton}> Forgot Your Password </button>
+                </div>
             </form>
         </div>
-        
-        </>
+    </>
     )
-
 }
 
 export default Login;

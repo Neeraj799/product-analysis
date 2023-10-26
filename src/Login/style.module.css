@@ -7,48 +7,74 @@ body {
     background-color: #4e657a;
 }
 
-.loginWrapper {
+.loginWrapper{
     display: flex;
     position: relative;
-    right: 20px;
-    top: 110px;
-    width: 500px;
+    top: 100px;
+    width: 400px;
     height: 400px;
+    padding: 40px;
     margin: 0px auto;
     background-color: #435c70;
-    border: 2px solid orange;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, .2);
-    justify-content: center;
-    
-    
+    text-align: center;
+    cursor: pointer;
 }
 
 .loginDesc {
     display: flex;
     position: relative;
-    top: 20px;
-    left: 40px;
+    bottom: 20px;
+    left: 60px;
     color: white;
     font-size: 20px;
-    font-weight: 600;
+    
 }
 
-.usernameDesc {
-    color: white;
-    position: relative;
-    top: 80px;
-    right: 280px;
-    font-size: 18px;
-    font-weight: 400;
+.formInput {
+    display: flex;
+    flex-direction: column;
+    
 }
 
-.passwordDesc {
-    color: white;
+.formInput label {
+    display: flex;
     position: relative;
-    top: 200px;
-    right: 357px;
-    font-size: 18px;
-    font-weight: 400;
+    color: white;
 }
+
+.formInput input {
+    width: 400px;
+    height: 30px;
+    margin: 10px 0px;
+   
+}
+
+.loginBtn {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 20px;
+   
+   
+}
+
+.loginBtn button {
+    display: flex;
+    width: 400px;
+    padding: 15px;
+    justify-content: center;
+    color: white;
+    background-color: orange;
+    cursor: pointer;
+
+    
+
+}
+
+
+
+
+
+
 
 
