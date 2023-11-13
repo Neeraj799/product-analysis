@@ -14,10 +14,17 @@ function Login() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Username:", username);
-        console.log("Password:", password);
+        if (username === "" || password === "") {
+            console.log("Username/password is empty. Please fill in both fields.");
+        }
+        else {
+            console.log("Username:", username);
+            console.log("Password:", password);
 
-        navigate('/');
+            navigate('/');
+        }
+
+        
     }
 
     const handleButton = (e) => {
@@ -53,7 +60,7 @@ function Login() {
                 </div>
                 <div className={style.loginBtn}>
                 <button type='submit'> Login </button>
-                <button type='button' onClick={handleButton}> Forgot Your Password </button>
+                <button type='button' onClick={handleButton}> Forgot Your Password? </button>
                 </div>
             </form>
         </div>

@@ -1,0 +1,9 @@
+.chartWrapper {
+    display: flex;
+    position: relative;
+    top: 110px;
+    left: 800px;
+    width: 600px;
+    height: 250px;
+    background-color: #435c70;
+}
